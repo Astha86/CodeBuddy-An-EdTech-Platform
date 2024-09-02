@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+<img src='https://github.com/Astha86/CodeBuddy-An-EdTech-Platform/blob/main/src/assets/Logo/buddyLogo.png' />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CodeBuddy - An EdTech Platform
 
-## Available Scripts
+CodeBuddy is an intuitive EdTech platform built with the MERN stack, enabling users to create, consume, and rate educational content. It delivers a seamless, interactive learning experience for students while allowing instructors to showcase expertise and connect with learners worldwide, fostering a global community of educators and students.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [System Architecture](#system-architecture)
+- [Front-end](#front-end)
+- [Back-end](#back-end)
+- [Schema](#schema)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## System Architecture
 
-### `npm test`
+The CodeBuddy ed-tech platform follows a client-server architecture with the following main components:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Front-end**: Built with ReactJS, it communicates with the back end using RESTful API calls.
+- **Back-end**: Developed with NodeJS and ExpressJS, it handles user authentication, course management, and more.
+- **Database**: Utilizes MongoDB as a NoSQL database to store course content, user data, and other relevant information.
 
-### `npm run build`
+![System Architecture Diagram](https://github.com/Astha86/CodeBuddy-An-EdTech-Platform/blob/main/src/assets/Images/architecture.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Front-end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The front end of CodeBuddy is built with ReactJS, offering a dynamic and responsive user interface for students and instructors. Here are some key pages and functionalities:
 
-### `npm run eject`
+**For Students:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Homepage**: Introduction to the platform.
+- **Course List**: List of available courses with descriptions and ratings.
+- **Wishlist**: Display added courses.
+- **Cart Checkout**: Complete course purchase using Razorpay.
+- **Course Content**: Access course material, including videos.
+- **Enrolled Courses**: Progress and list of enrolled courses.
+- **User Details**: Account information.
+- **User Edit Details**: Edit account information.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**For Instructors:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Dashboard**: Overview of instructor's courses and ratings.
+- **Insights**: Detailed course including the number of views, clicks, and other relevant metrics.
+- **Course Management Pages**: Create, update, delete courses.
+- **View and Edit Profile Details**: Account management.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Front-end tools and technologies include ReactJS, CSS, Tailwind CSS, Redux for state management, and VSCode for development.
+Additionally, we use some npm packages to add extra functionality to the front end.
 
-## Learn More
+[View Live Demo](https://codebuddy-liart.vercel.app/)
+![CodeBuddy1](https://github.com/Astha86/CodeBuddy-An-EdTech-Platform/blob/main/src/assets/Images/look.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Back-end
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The back end of CodeBuddy is built with NodeJS and ExpressJS and uses MongoDB as its primary database. Key features and functionalities include:
 
-### Analyzing the Bundle Size
+- **User Authentication and Authorization**: Secure login, OTP verification, and forgot password functionality.
+- **Course Management**: Instructors can create, update, delete courses, and students can view and rate them.
+- **Payment Integration**: Razorpay integration for course purchases.
+- **Cloud-based Media Management**: Cloudinary for storing and managing media content.
+- **Markdown Formatting**: Course content is stored in Markdown format for rendering.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Frameworks, libraries, and tools used**: Node.js, MongoDB, Express.js, JWT for authentication and authorization, Bcrypt for password hashing, and Mongoose for database interaction.
 
-### Making a Progressive Web App
+### Data Models and Database Schema
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Student Schema**: Includes name, email, password, and course details.
+- **Instructor Schema**: Includes name, email, password, and course details.
+- **Course Schema**: Includes course name, description, instructor details, and media content.
 
-### Advanced Configuration
+### Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The database for the platform is built using MongoDB, a NoSQL database that provides a flexible and scalable data storage solution. MongoDB allows for the storage of unstructured and semi-structured data. The database stores the course content, user data, and other relevant information related to the platform.
+  
+---
 
-### Deployment
+## Schema
+![CodeBuddy Schema](https://github.com/Astha86/CodeBuddy-An-EdTech-Platform/blob/main/src/assets/Images/Schema.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
+Thank you for using CodeBuddy!
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
