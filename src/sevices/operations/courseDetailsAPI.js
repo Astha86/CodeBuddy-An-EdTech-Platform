@@ -30,7 +30,8 @@ export const getAllCourses = async () => {
   try {
     const response = await apiConnector("GET", GET_ALL_COURSE_API)
     if (!response?.data?.success) {
-      throw new Error("Could Not Fetch Course Categories")
+      console.log("Could Not Fetch Course Categories")
+      // throw new Error("Could Not Fetch Course Categories")
     }
     result = response?.data?.data
   } catch (error) {
@@ -72,7 +73,8 @@ export const fetchCourseCategories = async () => {
     const response = await apiConnector("GET", COURSE_CATEGORIES_API)
     console.log("COURSE_CATEGORIES_API API RESPONSE............", response)
     if (!response?.data?.success) {
-      throw new Error("Could Not Fetch Course Categories")
+      console.log("Could Not Fetch Course Categories")
+      // throw new Error("Could Not Fetch Course Categories")
     }
     result = response?.data.data
     
